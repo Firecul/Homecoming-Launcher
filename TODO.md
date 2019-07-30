@@ -1,0 +1,2 @@
+-Add DxDiag functionality?
+-Send to discord?

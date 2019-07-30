@@ -34,18 +34,18 @@ event.phomecoming.com
 
 Q3: I can't join the server. It says no more <rank> allowed.
 Access to the server is limited by rank. When the amount of players on the server reaches a threshold, access is limited:
-ROLE            PLAYER LIMIT
-Guest/Scrub     15
-Steam/Rookie    25
-Racer           26
+ROLE						PLAYER LIMIT
+Guest/Scrub		 15
+Steam/Rookie		25
+Racer					 26
 
 Roles
 There are 5 main roles on the server:
-  * Guest/Scrub
-  * Steam/Rookie
-  * Racer
-  * Director
-  * Host
+	* Guest/Scrub
+	* Steam/Rookie
+	* Racer
+	* Director
+	* Host
 
 Guest/Scrub: The role given to everyone when they first join the server.
 Steam/Rookie: The players who have verified their account by obtaining the Steam role as described in Q5.
@@ -257,26 +257,26 @@ return
 
 ;Tab1 Stuff
 race:
-  Run fivem://connect/142.4.215.102
-  return
+	Run fivem://connect/142.4.215.102
+	return
 
 testing:
-  Run fivem://connect/158.69.144.59
-  return
+	Run fivem://connect/158.69.144.59
+	return
 
 dev:
-  Run fivem://connect/144.217.206.76
-  return
+	Run fivem://connect/144.217.206.76
+	return
 
 
 lookforfivem:
 Gui +OwnDialogs
 FileSelectFile, SelectedFile, 3, , Locate FiveM.exe, FiveM (FiveM.exe)
 if (SelectedFile = "")
-    MsgBox, The user didn't select anything.
+		MsgBox, The user didn't select anything.
 		LV_Delete()
 ;else
-    ;MsgBox, The user selected the following:`n%SelectedFile%
+		;MsgBox, The user selected the following:`n%SelectedFile%
 
 Guicontrol, , selfile, %SelectedFile%
 goto updatefiles
@@ -289,10 +289,10 @@ StringTrimRight, seldir, selectedfile, 9
 seldir2 := seldir . "FiveM.app\"
 
 Loop, %seldir2%\CitizenFX.log*
-    LV_Add("", A_LoopFileName, A_LoopFileSizeKB, A_LoopFileTimeModified, A_LoopFileFullPath)
+		LV_Add("", A_LoopFileName, A_LoopFileSizeKB, A_LoopFileTimeModified, A_LoopFileFullPath)
 
-LV_ModifyCol()  ; Auto-size each column to fit its contents.
-LV_ModifyCol(2, "75 Integer")  ; For sorting purposes, indicate that column 2 is an integer.
+LV_ModifyCol()	; Auto-size each column to fit its contents.
+LV_ModifyCol(2, "75 Integer")	; For sorting purposes, indicate that column 2 is an integer.
 LV_ModifyCol(3, "digit")
 
 ; Display the window and return. The script will be notified whenever the user double clicks a row.
@@ -303,13 +303,13 @@ MyListView:
 if (A_GuiEvent = "DoubleClick")
 {
 	LV_GetText(FileName, A_EventInfo, 1) ; Get the text of the first field.
-	;LV_GetText(FileDir, A_EventInfo, 4)  ; Get the text of the second field.
+	;LV_GetText(FileDir, A_EventInfo, 4)	; Get the text of the second field.
 	Run C:\Windows\Notepad.exe %seldir2%%FileName%,, UseErrorLevel
 	if ErrorLevel
 		MsgBox Could not open %seldir2%%FileName%
-    ;LV_GetText(RowText, A_EventInfo)  ; Get the text from the row's first field.
+		;LV_GetText(RowText, A_EventInfo)	; Get the text from the row's first field.
 
-  ;ToolTip You double-clicked row number %A_EventInfo%. Text: "%RowText%"
+	;ToolTip You double-clicked row number %A_EventInfo%. Text: "%RowText%"
 }
 return
 
@@ -328,4 +328,4 @@ ButtonCancel:
 ;Filedelete c:/temp/Homecoming.png
 ;Filedelete c:/temp/icon.ico
 FileRemoveDir, HomecomingLauncher, 1
-  ExitApp
+	ExitApp

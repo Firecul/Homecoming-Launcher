@@ -3,6 +3,7 @@
 FileCreateDir, HomecomingLauncher
 Fileinstall, pictures/Homecoming.png, HomecomingLauncher/Homecoming.png, 0
 Fileinstall, icons/icon.ico, HomecomingLauncher/icon.ico, 0
+Fileinstall, music/storm.mp3, HomecomingLauncher/storm.mp3, 0
 Menu, Tray, Icon, HomecomingLauncher/icon.ico, 1, 1
 
 vFAQ =
@@ -243,29 +244,41 @@ Gui, Add, ListView, xp+10 yp+20 r10 w600 gMyListView, Name|Size (KB)|Modified
 Gui, Tab, 5
 Gui, font, s10 norm
 Gui, Add, link, w620, Hello and welcome to the Project Homecoming Launcher! `n`nThis Launcher serves as the hub for everything you need to join the Project Homecoming racing servers! `n`nIn order to join one of our servers, you will first need to download and install FiveM, a third-party multiplayer client for Grand Theft Auto V. Go to FiveM's official website and follow their instructions to install the client at <a href="https://fivem.net">https://fivem.net/</a> `n`nOnce FiveM is installed, please join our <a href="https://discord.gg/xbf6pvH">Discord server</a> and read the <a href="https://discordapp.com/channels/388742985619079188/388989274156040193/">#faq</a> for instructions on how to join and how to gain the necessary roles. `n`nIt's also a good idea to read <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> and <a href="https://discordapp.com/channels/388742985619079188/565353654081552405/">#racing-etiquette</a> in their entirety before joining, as Homecoming has some rules and quirks that might not be obvious right off the bat.
+;gui, add, button, geasteregg, easter test
+;gui, add, button, gcrackegg, stop
 
 Gui, Tab
 Gui, font, norm
 Gui, add, button, w100 gPHDiscord, Discord
-GUi, add, button, xp+545 w100 gGuiClose, Exit
+gui, add, button, xp+455 gcrackegg, Stop Music
+GUi, add, button, xp+90 w100 gGuiClose, Exit
 Gui, Show, AutoSize Center, PH FiveM Launcher
 ;Gui, -SysMenu +Owner
 return
 
 
+easteregg:
+SoundPlay, HomecomingLauncher/storm.mp3
+	return
 
+crackegg:
+SoundPlay, HomecomingLauncher/stop.mp3
+	return
 
 ;Tab1 Stuff
 race:
 	Run fivem://connect/142.4.215.102
+	goto easteregg
 	return
 
 testing:
 	Run fivem://connect/158.69.144.59
+	goto easteregg
 	return
 
 dev:
 	Run fivem://connect/144.217.206.76
+	goto easteregg
 	return
 
 

@@ -35,18 +35,18 @@ event.phomecoming.com
 
 Q3: I can't join the server. It says no more <rank> allowed.
 Access to the server is limited by rank. When the amount of players on the server reaches a threshold, access is limited:
-ROLE						PLAYER LIMIT
-Guest/Scrub		 15
-Steam/Rookie		25
-Racer					 26
+ROLE                      PLAYER LIMIT
+Guest/Scrub         15
+Steam/Rookie     25
+Racer                      26
 
 Roles
 There are 5 main roles on the server:
-	* Guest/Scrub
-	* Steam/Rookie
-	* Racer
-	* Director
-	* Host
+  * Guest/Scrub
+  * Steam/Rookie
+  * Racer
+  * Director
+  * Host
 
 Guest/Scrub: The role given to everyone when they first join the server.
 Steam/Rookie: The players who have verified their account by obtaining the Steam role as described in Q5.

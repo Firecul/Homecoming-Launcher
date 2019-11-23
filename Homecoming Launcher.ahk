@@ -281,17 +281,14 @@ dev:
 
 
 lookforfivem:
-Gui +OwnDialogs
-FileSelectFile, SelectedFile, 3, , Locate FiveM.exe, FiveM (FiveM.exe)
-if (SelectedFile = "")
-		MsgBox, The user didn't select anything.
-		LV_Delete()
-;else
-		;MsgBox, The user selected the following:`n%SelectedFile%
-
-Guicontrol, , selfile, %SelectedFile%
-goto updatefiles
-return
+	Gui +OwnDialogs
+	FileSelectFile, SelectedFile, 3, , Locate FiveM.exe, FiveM (FiveM.exe)
+	if (SelectedFile = "")
+			MsgBox, The user didn't select anything.
+			LV_Delete()
+	Guicontrol, , selfile, %SelectedFile%
+	gosub, updatefiles
+	return
 
 updatefiles:
 ;dirvar = FiveM Application Data

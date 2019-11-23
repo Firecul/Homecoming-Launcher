@@ -7,176 +7,177 @@ FileCreateDir, HomecomingLauncher
 	Menu, Tray, Icon, HomecomingLauncher/icon.ico, 1, 1
 
 vFAQ =
-(
-READ THE WHOLE THING.
-We get asked the same questions over and over again, and it gets old very quickly. Virtually everything you need to know is explained here.
+	(
+	***READ THE WHOLE THING.***
+	*We get asked the same questions over and over again, and it gets old very quickly. Virtually everything you need to know is explained here.*
 
-General Questions & Roles
+	**__General Questions & Roles__**
 
-Q1. Can playing FiveM get me banned from GTA:Online?
-No. FiveM is installed in a completely different folder and only reads the GTA files, but does not alter them in any way. So as far as the Rockstar services are concerned, you are playing GTA5 single player.
+	**Q1. Can playing FiveM get me banned from GTA:Online?**
+	No. FiveM is installed in a completely different folder and only reads the GTA files, but does not alter them in any way. So as far as the Rockstar services are concerned, you are playing GTA5 single player.
 
-Q2. How do I join the server? Do I need to be a member of a specific crew?
-Anyone can join. Homecoming is a project featuring members from many creative communities, but is not officially tied to any specific group or crew.
+	**Q2. How do I join the server?**
+	To join, search for "Homecoming" in the FiveM server browser. If the servers don't show up, hit F8 to open the console and type connect <address> using the list below.
 
-To join, search for "Homecoming" in the FiveM server browser. If the servers don't show up, hit F8 to open the console and type connect <address> using the list below.
+	```MAIN SERVER:
+	race.phomecoming.com
+	racing.phomecoming.com
+	main.phomecoming.com
+	142.4.215.102
 
-MAIN SERVER:
-race.phomecoming.com
-racing.phomecoming.com
-main.phomecoming.com
-142.4.215.102
-
-TESTING/EVENTS:
-testing.phomecoming.com
-event.phomecoming.com
-158.69.144.59
+	TESTING/EVENTS:
+	testing.phomecoming.com
+	event.phomecoming.com
+	158.69.144.59```
 
 
-Q3: I can't join the server. It says no more <rank> allowed.
-Access to the server is limited by rank. When the amount of players on the server reaches a threshold, access is limited:
-ROLE                      PLAYER LIMIT
-Guest/Scrub         15
-Steam/Rookie     25
-Racer                      26
+	**Q3: I can't join the server. It says no more <rank> allowed.**
+	Access to the server is limited by rank. When the amount of players on the server reaches a threshold, access is limited:
+	```ROLE            PLAYER LIMIT
+	Guest/Scrub     15 (20 on Testing)
+	Steam/Rookie    25
+	Racer           26```
 
-Roles
-There are 5 main roles on the server:
-  * Guest/Scrub
-  * Steam/Rookie
-  * Racer
-  * Director
-  * Host
+	***Roles***
+	There are 5 main roles on the server:
+	  * Guest/Scrub
+	  * Steam/Rookie
+	  * Racer
+	  * Director
+	  * Host
 
-Guest/Scrub: The role given to everyone when they first join the server.
-Steam/Rookie: The players who have verified their account by obtaining the Steam role as described in Q5.
-Racer: Trusted members of the community who have the ability to host and manage races, including disqualifying (sin-binning) and kicking disruptive players.
-Director: People who run events. They have elevated access to features, such as managing races hosted by someone else.
-Host: Hosts are similar to Directors, but with even higher access.
+	**Guest/Scrub:** The role given to everyone when they first join the server.
+	**Steam/Rookie:** The players who have verified their account by obtaining the Steam role as described in Q5.
+	**Racer:** Trusted members of the community who have the ability to host and manage races, including disqualifying (sin-binning) and kicking disruptive players.
+	**Director:** People who run events. They have elevated access to features, such as managing races hosted by someone else.
+	**Host:** Hosts are similar to Directors, but with even higher access.
 
+	**Q4. What is the Steam role for?**
+	The Steam role is used to verify your account. It gives you the access to the Charliebot features, such as joining events and using the bot commands in #charlie.
 
-Q4. What is the Steam role for?
-The Steam role is used to verify your account. It gives you the access to the Charliebot features, such as joining events and using the bot commands in #charlie.
+	It also translates to you gaining Rookie role on the server which increases your chances of getting on the server with a higher slot limit.
 
-It also translates to you gaining Rookie role on the server which increases your chances of getting in due to the elevated slot limit.
+	**Q5. How do I gain the Steam role?**
+	- Connect to the Testing/Events server and press `F7` to open the Charlie menu.
+	**If you get stuck on "Entering session", check Q16. If the menu won't open and you see `Fetching Perms` on the screen, reconnect.**
 
-Q5. How do I gain the Steam role?
-- Connect to the Testing/Events server and press F7 to open the Charlie menu.
-If you get stuck on "Entering session", check Q16.
+	- On the menu, you should see a menu item: "Discord".
+	*If there is no Discord option available, just be patient and wait. It can take up to 30 minutes to appear as your code is being generated. If it is still missing after an hour, let us know in #help-and-support*
 
-- On the menu, you should see a menu item: "Discord".
-If there is no Discord option available, just be patient and wait. It can take up to an hour to appear as your code is being generated. If it is still missing after an hour, let us know in #help-and-support
+	- Under the "Discord" menu, you will eventually find a 6-character code in the range A-Z and 1-9, no zeroes.
 
-- Under the "Discord" menu, you will eventually find a 6-character code in the range A-Z and 1-9, no zeroes.
+	- Write down the code and use the command `!discord <code>` on the #charlie channel on Discord.
+	*e.g. If the code is `ABC123` then the command is `!discord ABC123`*
 
-- Write down the code and use the command !discord <code> on the #charlie channel on Discord.
-e.g. If the code is ABC123 then the command is !discord ABC123
+	- If successful, Charlie will tell you `Discord Steam role added and Rookie rank granted on server.` If you don't get this response, double-check your code (remember, no zeroes) and try again.
 
-- If successful, Charlie will tell you Discord Steam role added and Rookie rank granted on server. If you don't get this response, double-check your code (remember, no zeroes) and try again.
+	*It can take up to 30 mins for the role to sync with the server, in the meantime this is a good opportunity to test some vehicles and tracks on the server.*
 
-It can take up to 30 mins for the role to sync with the server, in the meantime this is a good opportunity to test some vehicles and tracks on the server.
+	**Q6: How do I gain the Racer role?**
+	The "Racer" role is for trusted members of the community and can be earned by simply being an active, helpful, trustworthy, and positive member of the community.
+	Do not ask to be made a Racer. This will only lower your chances of becoming one.
 
-Q6: How do I gain the Racer role?
-The "Racer" role is for trusted members of the community and can be earned by simply playing on the server and being a positive and trustworthy member of the community.
-Note: Do not ask for the Racer role. This will only make it less likely for you to be promoted. Just enjoy the server and the racing and you may eventually get noticed and promoted.
+	**Q7: I can't join the server. It says a whitelist is active.**
+	We use some additional roles for whitelisting purposes when events are being hosted (event-specific roles) or when Broughy is doing his thing (1322/1322+ roles).
 
+	The 1322 roles are split as follows:
+	1322: Broughy's Subscribers/Patreons/Regulars
+	1322+: Broughy's Discord members
 
-Q7: I can't join the server. It says a whitelist is active.
-At times, access to the servers is limited by a whitelist due to an event or some other reason.
+	**Q7b: I left the Discord and lost all my roles.**
 
-We use some additional roles (e.g. 1322 or EMDT) for whitelist purposes when events are being hosted by communities outside of Homecoming.
+	Type ``!roles` in #charlie to trigger a roles refresh.
+	This will re-apply your Steam role and check your eligibility for the 1322 roles.
 
-Community roles are generally split between members of the community in question and regulars/subscribers/Patreon supporters as follows:
-<role>: Regulars/Subscribers/Patreons
-<role>+: Discord members
+	**__Vehicles & Tracks__**
 
-These roles can take up to 24hrs to sync, so make sure you have the appropriate role well before an event.
+	**Q8. Do all cars handle the same as in GTA:Online?**
+	Generally speaking, all vehicles handle slightly differently from GTA:Online due to FiveM running on what is essentially GTA5 single player.
 
-Vehicles & Tracks
+	Additionally, many of the GTA:Online (generally referred to as “retail” or “vanilla”) vehicles have been adjusted to better be on pace in their designated class.
 
-Q8. Do all cars handle the same as in GTA:Online?
-Generally speaking, all vehicles handle slightly differently from GTA:Online due to FiveM running on what is essentially GTA5 single player.
+	To check if a car has been changed, do a search for `in:#update-log <car name>`. If no results show up, it's likely the car is untouched.
 
-Additionally, many of the GTA:Online (generally referred to as "retail" or "vanilla") vehicles have been adjusted to better be on pace in their designated class.
+	**Q9. Will you guys add [insert real-world car here] to the server?**
+	No. All vehicles on the Project Homecoming servers are lore-friendly, meaning that they fit into the satirical universe of GTA. So instead of Mercedes-Benz, we have Benefactor, etc.
 
-To check if a car has been changed, do a search for in:#update-log <car name>. If no results show up, it's likely the car is untouched.
+	**Q10. Will you remove kerb-boosting/short-shifting/mid-drive speed boost etc?**
+	We simply cannot do that. Those are parts of the core physics engine that we simply cannot do anything about.
 
-Q9. Will you guys add [insert real-world car here] to the server?
-No. All vehicles on the Project Homecoming servers are lore-friendly, meaning that they fit into the satirical universe of GTA. So instead of Mercedes-Benz, we have Benefactor, etc.
+	**Q11. How do I request a track to be added to the server?**
+	Track requests are closed to the general public at the moment. If you have a track you would like to see on the server feel free to drop a post including both a link to the track's Social Club page and a short video showing a lap the track in `#track-review` and we'll take a look.
 
-Q10. Will you remove kerb-boosting/short-shifting/mid-drive speed boost etc?
-We simply cannot do that. Those are parts of the core physics engine that we simply cannot do anything about.
+	If the track meets our standards it might be added, if it doesn't, we might ask for a few changes to be made to make it more suitable. We can't add every requested track though, so if we don't add yours, it's nothing personal.
 
+	When recording a video of the lap, don't just half-ass it and call it there. It will only make the track look bad in our eyes.
 
-Q11. How do I request a track to be added to the server?
-Track requests are closed to the general public at the moment. If you have a track you would like to see on the server feel free to drop a post including both a link to the track's Social Club page and a short video showing a lap the track in #track-review and we'll take a look.
+	The server is be updated with requested tracks on an ad-hoc basis and they will be added to the "Under Review" group.
 
-If the track meets our standards it might be added, if it doesn't, we might ask for a few changes to be made to make it more suitable. We can't add every requested track though, so if we don't add yours, it's nothing personal.
+	**__Miscellaneous__**
 
-When recording a video of the lap, don't just half-ass it and call it there. It will only make the track look bad in our eyes.
+	**Q12. How do I do everything?**
+	Hit F7 to open the Charlie menu, under which you'll find everything you'll need to spawn and save vehicles, join races, respawn, DNF, save your outfit, etc.
 
-The server is be updated with requested tracks on an ad-hoc basis and they will be added to the "Under Review" group.
+	For a general overview of how things work, check the wiki at wiki.phomecoming.com
 
-Miscellanious
-
-Q12. How do I do everything?
-Hit F7 to open the Charlie menu, under which you'll find everything you'll need to spawn and save vehicles, join races, respawn, DNF, save your outfit, etc.
-
-For a general overview of how things work, check the wiki at wiki.phomecoming.com
-
-Barring that, read and learn the #rules and #racing-etiquette.
+	Barring that, read and learn the #rules and #racing-etiquette.
 
 
-Q13: I would like to volunteer to help/contribute to Project Homecoming. How do I start?
-We are always looking for passionate and talented people to join our team. We are always on the look-out for coders, 3D modelers, modders and 2D artists.
+	**Q13: I would like to volunteer to help/contribute to Project Homecoming. How do I start?**
+	We are always looking for passionate and talented people to join our team. We are always on the look-out for coders, 3D modelers, modders and 2D artists.
 
-Project Homecoming is a passion project made by friends for no pay and runs strictly on a volunteer basis. All contributions to Project Homecoming are the property of the contributor, and other than allowing its use on the Project Homecoming series of FiveM servers, it is up to the contributor what is done with their property.
+	Project Homecoming is a passion project made by friends for no pay and runs strictly on a volunteer basis. All contributions to Project Homecoming are the property of the contributor, and other than allowing its use on the Project Homecoming series of FiveM servers, it is up to the contributor what is done with their property.
 
-For enquiries about joining the team or helping with the project, contact the head of the relevant department you wish to contribute to. You can find a list of all staff members in #credits.
+	For enquiries about joining the team or helping with the project, contact the head of the relevant department you wish to contribute to. You can find a list of all staff members in #credits.
 
+	**__Help and Support__**
 
-Help and Support
+	**Q14: I've been given the "Black Flagged" role and now I can't post in most channels.**
+	You have probably repeatedly spammed off-topic messages in the wrong places. The Black Flagged role now limits you to off-topic channels.
+	Don't panic about it. Unless you've been incredibly stupid it will be removed when someone remembers.
 
-Q14: I've been given the "Black Flagged" role and now I can't post in most channels.
-You have probably repeatedly spammed off-topic messages in the wrong places. The Black Flagged role now limits you to off-topic channels.
-Don't panic about it. Unless you've been incredibly stupid it will be removed when someone remembers.
+	**Q15: I got banned and now I can't talk on Discord!**
+	Anyone who gets banned from the servers should have the Time Out role, which prevents you from talking in channels outside of #appeals, where you can discuss the details of the ban with a member of the staff.
 
-Q15: I got banned and now I can't talk on Discord!
-Anyone who gets banned from the servers should have the Time Out role, which prevents you from talking in channels outside of #appeals, where you can discuss the details of the ban with a member of the staff.
+	**Q16: I'm stuck on the loading screen.**
+	This can happen when connecting to the server for the first time. There is quite a lot of content that needs to be downloaded, so the loading can get disrupted.
 
-Q16: I'm stuck on the loading screen.
-This can happen when connecting to the server for the first time. There is quite a lot of content that needs to be downloaded, so the loading can get disrupted.
+	As a general rule of thumb, when you see the chat window show up in the top right corner, give it a couple of minutes. If you're not in by then, hit F8 and type `quit` in the console to close FiveM and retry.
 
-As a general rule of thumb, when you see the chat window show up in the top right corner, give it a couple of minutes. If you're not in by then, hit F8 and type quit in the console to close FiveM and retry.
+	It can take several attempts, but it will load in eventually. Just be patient.
 
-It can take several attempts, but it will load in eventually. Just be patient.
+	**Q17: My controller doesn't work.**
+	If you're using a DS4 controller, you will need to install either **InputMapper** or **DS4Windows** to get it working properly with FiveM.
 
-Q17: My controller doesn't work.
-If you're using a DS4 controller, you will need to install either InputMapper or DS4Windows to get it working properly with FiveM.
+	For Xbox controllers, it's likely Steam is the culprit.
+	Some things you can try:
+	* Opt out of the Steam Beta Program
+	* Disable Steam Overlay
+	* Check your Steam controller settings
 
-For Xbox controllers, it's likely Steam is the culprit.
-Some things you can try:
-* Opt out of the Steam Beta Program
-* Disable Steam Overlay
-* Check your Steam controller settings
+	**Q18: My lap records aren't saving.**
+	*Laptime saving hasn't been implemented on the new system yet, so regardless of what you're about to read, your records will not save at the moment.*
 
+	In order for your laptimes to be registered on the leaderboards, you need to be running the game at 60fps due to the game engine having some weird behaviour at different framerates.
 
-Q18: My lap records aren't saving.
-In order for your laptimes to be registered on the leaderboards, you need to be running the game at 60fps due to the game engine having some weird behaviour at different framerates.
+	The best source of information on how to do this can be found at <https://wiki.phomecoming.com/doku.php?id=faq:fpslimt>
 
-The best source of information on how to do this can be found at https://wiki.phomecoming.com/doku.php?id=faq:fpslimt
+	**Q19: It says "Steam must be running" and I made sure it is**
+	First, make sure that you're opted out of Steam Beta Updates in the Steam settings (Settings -> Account -> Beta participation).
+	Second, close both Steam and FiveM and make sure you launch Steam before FiveM.
 
-Q19: It says "Steam must be running" and I made sure it is
-First, make sure that you're opted out of Steam Beta Updates in the Steam settings (Settings -> Account -> Beta participation).
-Second, close both Steam and FiveM and make sure you launch Steam before FiveM.
+	**Q20: Are there any more racing servers? The server is always full and I want to race!**
+	There is only one racing server for the time being. There are currently no plans to set up another one. If it starts looking like the Racing server is full 24/7, we might look into it.
 
+	Your best bet at grabbing a slot on the server is to keep an eye on Charliebot in the Discord user list to the right. When you see RACE change to CLOSED, it means a race has just ended. People generally leave between races, so it's a good time to give connecting a try.
+	Beyond that, you just need to be patient.
 
+	For anything not covered here, see the wiki at <https://wiki.phomecoming.com/>
 
-For anything not covered here, see the wiki at https://wiki.phomecoming.com/
+	**Read from the top. And then learn the #rules and #racing-etiquette.**
+	*TL;DR -- If you don't have time to read, we don't have time for you on the server.*
 
-Read from the top. And then learn the #rules and #racing-etiquette.
-TL;DR -- If you don't have time to read, we don't have time for you on the server.
-)
+	)
 
 Bold(text)
 	{	Gui, font, bold

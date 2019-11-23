@@ -291,13 +291,16 @@ lookforfivem:
 	return
 
 updatefiles:
-;dirvar = FiveM Application Data
-;MsgBox, %dirvar%
-StringTrimRight, seldir, selectedfile, 9
-seldir2 := seldir . "FiveM.app\"
-
-Loop, %seldir2%\CitizenFX.log*
-		LV_Add("", A_LoopFileName, A_LoopFileSizeKB, A_LoopFileTimeModified, A_LoopFileFullPath)
+	StringTrimRight, seldir, selectedfile, 9
+	seldir2 := seldir . "FiveM.app\logs\"
+	Loop, %seldir2%\*.log*
+	LV_Add("", A_LoopFileName, A_LoopFileSizeKB, A_LoopFileTimeModified, A_LoopFileFullPath)
+	LV_ModifyCol() ;Auto-size each column
+	LV_ModifyCol(2, "AutoHdr Integer")
+	LV_ModifyCol(3, "Digit")
+	LV_ModifyCol(3, "SortDesc")
+	Gui, Show
+	return
 
 LV_ModifyCol()	; Auto-size each column to fit its contents.
 LV_ModifyCol(2, "75 Integer")	; For sorting purposes, indicate that column 2 is an integer.

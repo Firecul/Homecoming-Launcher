@@ -302,23 +302,26 @@ updatefiles:
 	Gui, Show
 	return
 
-LV_ModifyCol()	; Auto-size each column to fit its contents.
-LV_ModifyCol(2, "75 Integer")	; For sorting purposes, indicate that column 2 is an integer.
-LV_ModifyCol(3, "digit")
-
-; Display the window and return. The script will be notified whenever the user double clicks a row.
-Gui, Show
-return
+GetFileSelected:
+	RowNumber := 0 ;start at the top
+	Loop
+	{
+			RowNumber := LV_GetNext(RowNumber)
+			if not RowNumber ;if no more selected rows
+					break
+			LV_GetText(Text, RowNumber)
+			seldirthree := seldir2 . Text
+	}
+	return
 
 MyListView:
-if (A_GuiEvent = "DoubleClick")
-{
-	LV_GetText(FileName, A_EventInfo, 1) ; Get the text of the first field.
-	;LV_GetText(FileDir, A_EventInfo, 4)	; Get the text of the second field.
-	Run C:\Windows\Notepad.exe %seldir2%%FileName%,, UseErrorLevel
-	if ErrorLevel
-		MsgBox Could not open %seldir2%%FileName%
-		;LV_GetText(RowText, A_EventInfo)	; Get the text from the row's first field.
+	if (A_GuiEvent = "DoubleClick")
+		{
+		LV_GetText(FileName, A_EventInfo, 1)
+		seldirthree := seldir2 . FileName
+		gosub, OpenLogViewer
+		}
+	return
 
 	;ToolTip You double-clicked row number %A_EventInfo%. Text: "%RowText%"
 }

@@ -1,10 +1,10 @@
 #SingleInstance, Force
 
 FileCreateDir, HomecomingLauncher
-Fileinstall, pictures/Homecoming.png, HomecomingLauncher/Homecoming.png, 0
-Fileinstall, icons/icon.ico, HomecomingLauncher/icon.ico, 0
-Fileinstall, music/storm.mp3, HomecomingLauncher/storm.mp3, 0
-Menu, Tray, Icon, HomecomingLauncher/icon.ico, 1, 1
+	Fileinstall, pictures/Homecoming.png, HomecomingLauncher/Homecoming.png, 0
+	Fileinstall, icons/icon.ico, HomecomingLauncher/icon.ico, 0
+	Fileinstall, music/storm.mp3, HomecomingLauncher/storm.mp3, 0
+	Menu, Tray, Icon, HomecomingLauncher/icon.ico, 1, 1
 
 vFAQ =
 (
@@ -179,66 +179,64 @@ TL;DR -- If you don't have time to read, we don't have time for you on the serve
 )
 
 Bold(text)
-{	Gui, font, bold
-	Gui, Add, text, w600, %text%
-}
+	{	Gui, font, bold
+		Gui, Add, text, w600, %text%
+	}
 
 Normal(text)
-{	Gui, font, Norm
-	Gui, Add, text, w600, %text%
-}
+	{	Gui, font, Norm
+		Gui, Add, text, w600, %text%
+	}
 
 Gui, New
-Gui, Add, Tab3,, Connect|Rules|FAQ|Tools|About
+	Gui, Add, Tab3,, Connect|Rules|FAQ|Tools|About
 
-;Tab1
-Gui, Add, Picture, w620 h-1, HomecomingLauncher/Homecoming.png
-Gui, Add, GroupBox, w220 h115, Project Homecoming Servers:
-GUi, add, button, xp+10 yp+20 w200 +Default gRace, &Race Server
-GUi, add, button, w200 gTesting, &Testing Server
-GUi, add, button, w200 gDev, &Dev Server
-Gui, add, Groupbox, xp+240 yp-78 w370 h45, Disclaimer
-Gui, add, link, xp+10 yp+20 w350, By joining our servers you agree to be bound to the <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> of our server.
-gui, add, groupbox, xp-10 yp+30 w370 h40,
-gui, add, link, xp+10 yp+15 w350, <a href="https://phomecoming.com/status">To see server status, click here to go to the website</a>
+	Gui, Tab, 1 ;Connect
+		Gui, Add, Picture, w620 h-1, HomecomingLauncher/Homecoming.png
+		Gui, Add, GroupBox, w220 h115, Project Homecoming Servers:
+		GUi, add, button, xp+10 yp+20 w200 +Default gRace, &Race Server
+		GUi, add, button, w200 gTesting, &Testing Server
+		GUi, add, button, w200 gDev, &Dev Server
+		Gui, add, Groupbox, xp+240 yp-78 w370 h45, Disclaimer
+		Gui, add, link, xp+10 yp+20 w350, By joining our servers you agree to be bound to the <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> of our server.
+		gui, add, groupbox, xp-10 yp+30 w370 h40,
+		gui, add, link, xp+10 yp+15 w350, <a href="https://phomecoming.com/status">To see server status, click here to go to the website</a>
 
-Gui, Tab, 2
-Gui, Add, GroupBox, w620 h700, Project Homecoming Specific Rules:
-Gui, font, bold
-Gui, Add, text, xp+10 yp+20 w550, 1) No insulting, harassing, griefing, flaming or generally abusive behaviour
-Normal("This includes using weapons, killing other people on the server, using abusive language, etc.")
-Bold("2) Don't troll, interrupt or inconvenience people")
-Normal("For example, don't have a full-blown conversation in chat during a race or testing, don't start testing on the same track someone's already on without permission, etc.`nIn general, leave people alone. If you're bored, go blow stuff up in GTA:Online.")
-Bold("3) Don't use third-party menus")
-Normal("We have server-side menus for car spawning and customization.")
-Bold("4) Read channel topics to avoid going off-topic")
-Normal("Repeat offenders will be 'Black-Flagged,' blocking you from posting in certain channels.")
-Bold("5) Don't tag staff or admins")
-Normal("We read the chats and will respond to things as necessary when we have the time.")
-Bold("6) Use the #reports channel to report poor conduct on the server")
-Normal("Don't start arguing in the chat or on Discord. Make a report and leave it, or take it to PMs.`nIf you aren't involved in a report, do not speak in the channel.")
-Bold("7) This is a CLEAN racing server.")
-Normal("If you take somebody out, intentionally or otherwise, wait for them to get back ahead of you before continuing.`nMore specific racing rules in #racing-etiquette.")
-Bold("8) Don't spoil sporting events, real-life races, movies, series episodes, etc.")
-Bold("9) No offensive names")
-Normal("If you're using a racist, homophobic, etc. name you will be either asked to change it or straight up banned.")
-Bold("10) Study and learn #racing-etiquette")
-Bold("11) Attempting to evade a ban will result in an instant permanent ban")
-Normal("Creating a secondary account or playing on another account in order to bypass a ban on the primary account is called 'ban evasion', and it will be met with a permanent, irreversible ban from all Homecoming servers and Discord. This is your only warning.")
-Bold("Anything not explicitly stated in these rules falls under the judgement of the staff, who will decide on the appropriate course of action on a case-by-case basis. When reporting incidents where rules were broken, please do your best to provide evidence in the form of screenshots or video, so that we are able to make a more informed decision.")
+	Gui, Tab, 2
+		Gui, Add, GroupBox, w620 h700, Project Homecoming Specific Rules:
+		Gui, font, bold
+		Gui, Add, text, xp+10 yp+20 w550, 1) No insulting, harassing, griefing, flaming or generally abusive behaviour
+		Normal("This includes using weapons, killing other people on the server, using abusive language, etc.")
+		Bold("2) Don't troll, interrupt or inconvenience people")
+		Normal("For example, don't have a full-blown conversation in chat during a race or testing, don't start testing on the same track someone's already on without permission, etc.`nIn general, leave people alone. If you're bored, go blow stuff up in GTA:Online.")
+		Bold("3) Don't use third-party menus")
+		Normal("We have server-side menus for car spawning and customization.")
+		Bold("4) Read channel topics to avoid going off-topic")
+		Normal("Repeat offenders will be 'Black-Flagged,' blocking you from posting in certain channels.")
+		Bold("5) Don't tag staff or admins")
+		Normal("We read the chats and will respond to things as necessary when we have the time.")
+		Bold("6) Use the #reports channel to report poor conduct on the server")
+		Normal("Don't start arguing in the chat or on Discord. Make a report and leave it, or take it to PMs.`nIf you aren't involved in a report, do not speak in the channel.")
+		Bold("7) This is a CLEAN racing server.")
+		Normal("If you take somebody out, intentionally or otherwise, wait for them to get back ahead of you before continuing.`nMore specific racing rules in #racing-etiquette.")
+		Bold("8) Don't spoil sporting events, real-life races, movies, series episodes, etc.")
+		Bold("9) No offensive names")
+		Normal("If you're using a racist, homophobic, etc. name you will be either asked to change it or straight up banned.")
+		Bold("10) Study and learn #racing-etiquette")
+		Bold("11) Attempting to evade a ban will result in an instant permanent ban")
+		Normal("Creating a secondary account or playing on another account in order to bypass a ban on the primary account is called 'ban evasion', and it will be met with a permanent, irreversible ban from all Homecoming servers and Discord. This is your only warning.")
+		Bold("Anything not explicitly stated in these rules falls under the judgement of the staff, who will decide on the appropriate course of action on a case-by-case basis. When reporting incidents where rules were broken, please do your best to provide evidence in the form of screenshots or video, so that we are able to make a more informed decision.")
 
-Gui, Tab, 3
-Gui, font, s10 norm
-Gui, Add, edit, w620 h700 Multi ReadOnly, %vFAQ%
+	Gui, Tab, 3
+		Gui, font, s10 norm
+		Gui, Add, edit, w620 h700 Multi ReadOnly, %vFAQ%
 
-
-Gui, Tab, 4
-Gui, font, s10 norm
-Gui, Add, groupbox, w620 h50, FiveM install location:
-Gui, add, text, xp+10 yp+20 w300 vselfile, (Not found)
-Gui, add, button, xp+470 yp-6 glookforfivem, Locate FiveM install
-
-Gui, Add, groupbox, xp-480 yp+40 w620 h260, Found Logs:
+	Gui, Tab, 4
+		Gui, font, s10 norm
+		Gui, Add, groupbox, w620 h50, FiveM install location:
+		Gui, add, text, xp+10 yp+20 w300 vselfile, (Not found)
+		Gui, add, button, xp+470 yp-6 glookforfivem, Locate FiveM install
+		Gui, Add, groupbox, xp-480 yp+40 w620 h260, Found Logs:
 Gui, Add, ListView, xp+10 yp+20 r10 w600 gMyListView, Name|Size (KB)|Modified
 
 Gui, Tab, 5

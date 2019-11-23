@@ -238,22 +238,21 @@ Gui, New
 		Gui, add, text, xp+10 yp+20 w300 vselfile, (Not found)
 		Gui, add, button, xp+470 yp-6 glookforfivem, Locate FiveM install
 		Gui, Add, groupbox, xp-480 yp+40 w620 h260, Found Logs:
-Gui, Add, ListView, xp+10 yp+20 r10 w600 gMyListView, Name|Size (KB)|Modified
+		Gui, Add, ListView, xp+10 yp+20 r10 w600 AltSubmit Grid -Multi gMyListView vMyListView, Name|Size (KB)|Modified
 
-Gui, Tab, 5
-Gui, font, s10 norm
-Gui, Add, link, w620, Hello and welcome to the Project Homecoming Launcher! `n`nThis Launcher serves as the hub for everything you need to join the Project Homecoming racing servers! `n`nIn order to join one of our servers, you will first need to download and install FiveM, a third-party multiplayer client for Grand Theft Auto V. Go to FiveM's official website and follow their instructions to install the client at <a href="https://fivem.net">https://fivem.net/</a> `n`nOnce FiveM is installed, please join our <a href="https://discord.gg/xbf6pvH">Discord server</a> and read the <a href="https://discordapp.com/channels/388742985619079188/388989274156040193/">#faq</a> for instructions on how to join and how to gain the necessary roles. `n`nIt's also a good idea to read <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> and <a href="https://discordapp.com/channels/388742985619079188/565353654081552405/">#racing-etiquette</a> in their entirety before joining, as Homecoming has some rules and quirks that might not be obvious right off the bat.
-;gui, add, button, geasteregg, easter test
-;gui, add, button, gcrackegg, stop
+	Gui, Tab, 5
+		Gui, font, s10 norm
+		Gui, Add, link, w620, Hello and welcome to the Project Homecoming Launcher! `n`nThis Launcher serves as the hub for everything you need to join the Project Homecoming racing servers! `n`nIn order to join one of our servers, you will first need to download and install FiveM, a third-party multiplayer client for Grand Theft Auto V. Go to FiveM's official website and follow their instructions to install the client at <a href="https://fivem.net">https://fivem.net/</a> `n`nOnce FiveM is installed, please join our <a href="https://discord.gg/xbf6pvH">Discord server</a> and read the <a href="https://discordapp.com/channels/388742985619079188/388989274156040193/">#faq</a> for instructions on how to join and how to gain the necessary roles. `n`nIt's also a good idea to read <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> and <a href="https://discordapp.com/channels/388742985619079188/565353654081552405/">#racing-etiquette</a> in their entirety before joining, as Homecoming has some rules and quirks that might not be obvious right off the bat.
 
-Gui, Tab
-Gui, font, norm
-Gui, add, button, w100 gPHDiscord, Discord
-gui, add, button, xp+455 gcrackegg, Stop Music
-GUi, add, button, xp+90 w100 gGuiClose, Exit
-Gui, Show, AutoSize Center, PH FiveM Launcher
-;Gui, -SysMenu +Owner
-return
+	Gui, Tab
+		Gui, font, norm
+		Gui, add, button, w100 gPHDiscord, Discord
+		;gui, add, button, geasteregg, easter test
+		;gui, add, button, gcrackegg, stop
+		gui, add, button, xp+455 gcrackegg, Stop Music
+		GUi, add, button, xp+90 w100 gGuiClose, Exit
+		Gui, Show, AutoSize Center, PH FiveM Launcher
+		;Gui, -SysMenu +Owner
 
 
 easteregg:

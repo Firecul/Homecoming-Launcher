@@ -1,5 +1,5 @@
 #SingleInstance, Force
-
+#Include Anchor.ahk
 FileCreateDir, HomecomingLauncher
 	Fileinstall, pictures/Homecoming.png, HomecomingLauncher/Homecoming.png, 0
 	Fileinstall, icons/icon.ico, HomecomingLauncher/icon.ico, 0
@@ -254,6 +254,14 @@ Gui, New
 		Gui, Show, AutoSize Center, PH FiveM Launcher
 		;Gui, -SysMenu +Owner
 
+Gui, LogViewerWindow: +Resize
+	gui, LogViewerWindow: font, s10 norm ;LogViewer Window
+	gui, LogViewerWindow: add, groupbox, w1000 h50 vGB, Selected log file:
+	gui, LogViewerWindow: add, text, xp+10 yp+20 w980 vSelLog, (Error)
+	gui, LogViewerWindow: font,, Lucida Console
+	gui, LogViewerWindow: add, edit, xp-10 yp+39 w1000 r30 vLogContents, (File Empty?)
+	gui, LogViewerWindow: font,
+	gui, LogViewerWindow: font, s10
 
 menu, submenu, add, Log Viewer, OpenLogViewer ;Context Menu
 	menu, submenu, Default, Log Viewer
@@ -343,6 +351,12 @@ GuiContextMenu:
 	Menu, ContextMenu, Show, %A_GuiX%, %A_GuiY%
 	return
 
+LogViewerWindowGuiSize:
+	Anchor("GB","w")
+	Anchor("SelLog","w")
+	Anchor("LogContents","wh")
+	Anchor("Parse","y")
+	return
 
 OpenLogViewer:
 	gosub, GetFileSelected

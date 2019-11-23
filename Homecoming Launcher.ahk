@@ -255,6 +255,11 @@ Gui, New
 		;Gui, -SysMenu +Owner
 
 
+menu, submenu, add, Log Viewer, OpenLogViewer ;Context Menu
+	menu, submenu, Default, Log Viewer
+	menu, submenu, add, Default Editor, opendefault
+	menu, submenu, add, Notepad, opennotepad
+	Menu, ContextMenu, Add, Open In, :Submenu
 easteregg:
 SoundPlay, HomecomingLauncher/storm.mp3
 	return
@@ -323,13 +328,35 @@ MyListView:
 		}
 	return
 
-	;ToolTip You double-clicked row number %A_EventInfo%. Text: "%RowText%"
-}
-return
+GuiContextMenu:
+	if (A_GuiControl != "MyListView")
+		return
+	gosub, GetFileSelected
+	Menu, ContextMenu, Show, %A_GuiX%, %A_GuiY%
+	return
 
 
+OpenLogViewer:
+	gosub, GetFileSelected
+	gui, LogViewerWindow: show, AutoSize Center, Log Viewer
+	Guicontrol, LogViewerWindow: text, SelLog, %seldirthree%
+	fileread, LogContents, %seldirthree%
+	Guicontrol, LogViewerWindow: text, LogContents, %LogContents%
+	return
 
+opendefault:
+	gosub, GetFileSelected
+	Run %seldirthree%,, UseErrorLevel
+	if ErrorLevel
+	MsgBox Could not open %seldirthree%
+	return
 
+opennotepad:
+	gosub, GetFileSelected
+	Run C:\Windows\Notepad.exe %seldirthree%,, UseErrorLevel
+	if ErrorLevel
+	MsgBox Could not open %seldirthree%
+	return
 
 PHDiscord:
  Run https://discord.gg/xbf6pvH

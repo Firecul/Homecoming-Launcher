@@ -260,6 +260,14 @@ menu, submenu, add, Log Viewer, OpenLogViewer ;Context Menu
 	menu, submenu, add, Default Editor, opendefault
 	menu, submenu, add, Notepad, opennotepad
 	Menu, ContextMenu, Add, Open In, :Submenu
+
+EnvGet, LOCALAPPDATA, LOCALAPPDATA ;Searches Fivem default location
+	Loop, %LOCALAPPDATA%\FiveM\FiveM.exe, , 1
+	SelectedFile := A_LoopFileFullPath
+	Guicontrol, , selfile, %SelectedFile%
+	gosub updatefiles
+	return
+
 easteregg:
 SoundPlay, HomecomingLauncher/storm.mp3
 	return

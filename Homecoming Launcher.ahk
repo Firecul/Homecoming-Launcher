@@ -196,8 +196,8 @@ Gui, New
 		Gui, Add, Picture, w620 h-1, HomecomingLauncher/Homecoming.png
 		Gui, Add, GroupBox, w220 h115, Project Homecoming Servers:
 		GUi, add, button, xp+10 yp+20 w200 +Default gRace, &Race Server
+		GUi, add, button, w200 gRace2, &Race Server 2
 		GUi, add, button, w200 gTesting, &Testing Server
-		GUi, add, button, w200 gDev, &Dev Server
 		Gui, add, Groupbox, xp+240 yp-78 w370 h45, Disclaimer
 		Gui, add, link, xp+10 yp+20 w350, By joining our servers you agree to be bound to the <a href="https://discordapp.com/channels/388742985619079188/395687147732205578/">#rules</a> of our server.
 		gui, add, groupbox, xp-10 yp+30 w370 h40,
@@ -286,17 +286,17 @@ SoundPlay, HomecomingLauncher/stop.mp3
 
 ;Tab1 Stuff
 race:
-	Run fivem://connect/142.4.215.102
+	Run, cmd.exe /C start fivem://connect/race.phomecoming.com,,hide
 	goto easteregg
 	return
 
 testing:
-	Run fivem://connect/158.69.144.59
+	Run, cmd.exe /C start fivem://connect/testing.phomecoming.com,,hide
 	goto easteregg
 	return
 
-dev:
-	Run fivem://connect/144.217.206.76
+race2:
+	Run, cmd.exe /C start fivem://connect/race2.phomecoming.com,,hide
 	goto easteregg
 	return
 
